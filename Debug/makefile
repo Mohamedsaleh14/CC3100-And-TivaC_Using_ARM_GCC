@@ -10,8 +10,12 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./main.o" \
 "./tm4c123gh6pm_startup_ccs_gcc.o" \
+"./ERRH/ERRH.o" \
 "./HAL/SPID.o" \
+"./HAL/SRHL.o" \
+"./HAL/TIMD.o" \
 "./HAL/board.o" \
+"./HAL/uDMA.o" \
 "./cmsis/cmsis_nvic.o" \
 "./cmsis/system_LM4F.o" \
 "./simplelink/source/device.o" \
@@ -35,10 +39,12 @@ RMDIR := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include ERRH/subdir_vars.mk
 -include HAL/subdir_vars.mk
 -include cmsis/subdir_vars.mk
 -include simplelink/source/subdir_vars.mk
 -include subdir_rules.mk
+-include ERRH/subdir_rules.mk
 -include HAL/subdir_rules.mk
 -include cmsis/subdir_rules.mk
 -include simplelink/source/subdir_rules.mk
@@ -170,8 +176,8 @@ CC3100-And-TivaC.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.o" "tm4c123gh6pm_startup_ccs_gcc.o" "HAL/SPID.o" "HAL/board.o" "cmsis/cmsis_nvic.o" "cmsis/system_LM4F.o" "simplelink/source/device.o" "simplelink/source/driver.o" "simplelink/source/flowcont.o" "simplelink/source/fs.o" "simplelink/source/netapp.o" "simplelink/source/netcfg.o" "simplelink/source/nonos.o" "simplelink/source/socket.o" "simplelink/source/spawn.o" "simplelink/source/wlan.o" 
-	-$(RM) "main.d" "tm4c123gh6pm_startup_ccs_gcc.d" "HAL/SPID.d" "HAL/board.d" "cmsis/cmsis_nvic.d" "cmsis/system_LM4F.d" "simplelink/source/device.d" "simplelink/source/driver.d" "simplelink/source/flowcont.d" "simplelink/source/fs.d" "simplelink/source/netapp.d" "simplelink/source/netcfg.d" "simplelink/source/nonos.d" "simplelink/source/socket.d" "simplelink/source/spawn.d" "simplelink/source/wlan.d" 
+	-$(RM) "main.o" "tm4c123gh6pm_startup_ccs_gcc.o" "ERRH/ERRH.o" "HAL/SPID.o" "HAL/SRHL.o" "HAL/TIMD.o" "HAL/board.o" "HAL/uDMA.o" "cmsis/cmsis_nvic.o" "cmsis/system_LM4F.o" "simplelink/source/device.o" "simplelink/source/driver.o" "simplelink/source/flowcont.o" "simplelink/source/fs.o" "simplelink/source/netapp.o" "simplelink/source/netcfg.o" "simplelink/source/nonos.o" "simplelink/source/socket.o" "simplelink/source/spawn.o" "simplelink/source/wlan.o" 
+	-$(RM) "main.d" "tm4c123gh6pm_startup_ccs_gcc.d" "ERRH/ERRH.d" "HAL/SPID.d" "HAL/SRHL.d" "HAL/TIMD.d" "HAL/board.d" "HAL/uDMA.d" "cmsis/cmsis_nvic.d" "cmsis/system_LM4F.d" "simplelink/source/device.d" "simplelink/source/driver.d" "simplelink/source/flowcont.d" "simplelink/source/fs.d" "simplelink/source/netapp.d" "simplelink/source/netcfg.d" "simplelink/source/nonos.d" "simplelink/source/socket.d" "simplelink/source/spawn.d" "simplelink/source/wlan.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

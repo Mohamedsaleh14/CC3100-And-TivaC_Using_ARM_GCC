@@ -24,21 +24,62 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * File:			common.h
+ * File:			ERRH.h
  * Author:		Mohamed Saleh (mohamedsaleh.elec@gmail.com).
  * Version:		1.0.0.
- * Description:	Common header file definitions and declaration.
+ * Description:	Error Handler.
  */
 
-#ifndef DEBUG_COMMON_H_
-#define DEBUG_COMMON_H_
+#ifndef ERRH_ERRH_H_
+#define ERRH_ERRH_H_
 
-#define TRUE_BOOL	(0==0)
-#define FALSE_BOOL	(0!=0)
+#define NUM_OF_ERRORS			8
+#define NUM_OF_ERR_GROUPS		2
 
-#define	SW_OK	1
-#define SW_NOK	0
+typedef enum{
+	EER_NOT_ACTIVE = 0,
+	ERR_NOT_TESTED,
+	ERR_PASS,
+	ERR_FAIL
+} ERRH_status_T;
+
+typedef enum{
+	SPI_RECEIVE_TIMEOUT = 0,
+	SPI_INIT_FAILED = 1,
+	SPI_0_INIT_FAILED = 2,
+	SPI_1_INIT_FAILED = 3,
+	SPI_2_INIT_FAILED = 4,
+	SPI_TRANSMIT_FAIL_FIFO_FULL = 5,
+	UDMA_CONTROL_STRUCTURE_FAIL =6,
+	UDMA_STATUS_UNDEFINED = 7
+}ERRH_erros_id_T;
+
+typedef enum{
+	SPI_DRIVER = 0,
+	UDMA_DRIVER =1
+} ERRH_errors_group_T;
 
 
 
-#endif /* DEBUG_COMMON_H_ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* ERRH_ERRH_H_ */

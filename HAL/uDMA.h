@@ -24,21 +24,55 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * File:			common.h
+ * File:			uDMAC.h
  * Author:		Mohamed Saleh (mohamedsaleh.elec@gmail.com).
  * Version:		1.0.0.
- * Description:	Common header file definitions and declaration.
+ * Description:	uDMA driver.
  */
+#ifndef HAL_UDMA_H_
+#define HAL_UDMA_H_
 
-#ifndef DEBUG_COMMON_H_
-#define DEBUG_COMMON_H_
+#define UDMA_BUFFER_SIZE		255
 
-#define TRUE_BOOL	(0==0)
-#define FALSE_BOOL	(0!=0)
+typedef enum{
+	DMA_IDLE = 0,
+	DMA_READING_CHANNEL_DATA = 1,
+	DMA_READING_SOURCE_END_POINTER = 2,
+	DMA_READING_DESTINATION_END_POINTER = 3,
+	DMA_READING_SOURCE_DATA = 4,
+	DMA_WRITING_DESTINATION_DATA = 5,
+	DMA_WAITING_REQUEST_CLEAR = 6,
+	DMA_WRITING_CHANNEL_DATA = 7,
+	DMA_STALLED = 8,
+	DMA_DONE = 9,
+	DMA_UNDEFINED_0 = 0xA,
+	DMA_UNDEFINED_1 = 0xB,
+	DMA_UNDEFINED_2 = 0xC,
+	DMA_UNDEFINED_3 = 0xD,
+	DMA_UNDEFINED_4 = 0xE,
+	DMA_UNDEFINED_5 =0xF
+}UDMA_state_T;
 
-#define	SW_OK	1
-#define SW_NOK	0
+typedef struct{
+	uint8_t num_configured_channels;
+	UDMA_state_T state_machine_status;
+	uint8_t master_enable_status;
+}UDMA_status_T;
+
+uint16_t UDMA_ssi2_app_rx_data[UDMA_BUFFER_SIZE];
+
+extern void UDMA_Init(void);
+extern void UDMA_SetChSwRqt(uint32_t channel_num);
+extern void UDMA_SetSSI2TxData(uint16_t* buffer);
+extern void UDMA_EnableAgain(void);
+extern void UDMA_UpdateSSI2RxData(void);
+extern void UDMA_RxTransferSize(uint8_t size);
+extern void UDMA_TxTransferSize(uint8_t size);
+extern uint8_t UDMA_GetTxTransferSize(void);
+extern uint8_t UDMA_GetRxTransferSize(void);
+extern uint32_t UDMA_GetWaitOnRqtStatus(void);
+extern UDMA_status_T UDMA_GetStatus(void);
 
 
 
-#endif /* DEBUG_COMMON_H_ */
+#endif /* HAL_UDMA_H_ */

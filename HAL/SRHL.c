@@ -24,21 +24,89 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * File:			common.h
+ * File:			SRHL.c
  * Author:		Mohamed Saleh (mohamedsaleh.elec@gmail.com).
  * Version:		1.0.0.
- * Description:	Common header file definitions and declaration.
+ * Description:	Sender/Receiver Handler.
  */
 
-#ifndef DEBUG_COMMON_H_
-#define DEBUG_COMMON_H_
+#include "../common.h"
+#include "SRHL.h"
 
-#define TRUE_BOOL	(0==0)
-#define FALSE_BOOL	(0!=0)
+Fd_t SRHL_IfOpen(char* pIfName , unsigned long flags)
+{
+	/*
+	 * Initialize PE4 (nHIB) as GPIO, LOW
+	 * Initialize PE0 (CS) as GPIO HIGH
+	 */
 
-#define	SW_OK	1
-#define SW_NOK	0
+
+	/*
+	 * Enable pull up on PB1, CC3100 UART Rx --> 4ma, type std wpu
+	 *
+	 * Configure SSI2
+	 * 		PB4 ---> CLK
+	 * 		PB5 ---> FSS
+	 * 		PB6 ---> Rx
+	 * 		PB7 ---> Tx
+	 */
+
+	/*
+	 * Clock is configured at 12 MHz
+	 * FRF MOTO MODE 0
+	 * MODE MASTER
+	 * 8
+	 *
+	 * ENABLE SSI2
+	 */
+
+	/*
+	 * Configure HOST IRQ line
+	 *
+	 * GPIO PB2 as input
+	 * Pad Configuration ---> 2ms, rising edge,Type STD WPU
+	 *
+	 * Interrupt type rising edge
+	 * GPIO interrupt clear then disable
+	 * enable interrupt for portB inside the processor vtable
+	 * Processor interrupt enable
+	 */
+
+	/*
+	 * Delay 1ms
+	 */
+
+	/*
+	 * Enable WLAN interrupt
+	 *
+	 *
+	 * CC3100_InterruptEnable();
+	 */
+
+	//return
+}
+
+
+int SRHL_IfClose(Fd_t Fd)
+{
+	/*
+	 * Disable WLAN interrupt
+	 *
+	 * CC3100_InterruptDisable();
+	 */
+
+	//return
+}
+
+int SRHL_IfRead(Fd_t Fd , char* pBuff , int Len)
+{
+
+}
+
+int SRHL_IfWrite(Fd_t Fd , char* pBuff , int Len)
+{
+
+}
 
 
 
-#endif /* DEBUG_COMMON_H_ */

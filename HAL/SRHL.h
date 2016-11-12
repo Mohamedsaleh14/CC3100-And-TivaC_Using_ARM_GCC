@@ -24,21 +24,20 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * File:			common.h
+ * File:			SRHL.c
  * Author:		Mohamed Saleh (mohamedsaleh.elec@gmail.com).
  * Version:		1.0.0.
- * Description:	Common header file definitions and declaration.
+ * Description:	Sender/Receiver Handler.
  */
+#ifndef HAL_SRHL_H_
+#define HAL_SRHL_H_
 
-#ifndef DEBUG_COMMON_H_
-#define DEBUG_COMMON_H_
+typedef short* Fd_t;
 
-#define TRUE_BOOL	(0==0)
-#define FALSE_BOOL	(0!=0)
-
-#define	SW_OK	1
-#define SW_NOK	0
+extern Fd_t SRHL_IfOpen(char* pIfName , unsigned long flags);
+extern int SRHL_IfClose(Fd_t Fd);
+extern int SRHL_IfRead(Fd_t Fd , char* pBuff , int Len);
+extern int SRHL_IfWrite(Fd_t Fd , char* pBuff , int Len);
 
 
-
-#endif /* DEBUG_COMMON_H_ */
+#endif /* HAL_SRHL_H_ */

@@ -7,7 +7,7 @@ simplelink/source/driver.o: ../simplelink/source/driver.c \
  ../simplelink/source/../include/../../cmsis/core_cmFunc.h \
  ../simplelink/source/../include/../../cmsis/core_cm4_simd.h \
  ../simplelink/source/../include/../../HAL/board.h \
- ../simplelink/source/../include/../../HAL/SPID.h \
+ ../simplelink/source/../include/../../HAL/SRHL.h \
  ../simplelink/source/../include/../source/objInclusion.h \
  ../simplelink/source/../include/../source/../include/simplelink.h \
  ../simplelink/source/../include/trace.h \
@@ -39,7 +39,7 @@ simplelink/source/driver.o: ../simplelink/source/driver.c \
 
 ../simplelink/source/../include/../../HAL/board.h:
 
-../simplelink/source/../include/../../HAL/SPID.h:
+../simplelink/source/../include/../../HAL/SRHL.h:
 
 ../simplelink/source/../include/../source/objInclusion.h:
 

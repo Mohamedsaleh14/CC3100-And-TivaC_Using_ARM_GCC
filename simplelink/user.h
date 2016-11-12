@@ -77,7 +77,7 @@ extern "C" {
 #include <string.h>
 #include "../cmsis/LM4F120H5QR.h"
 #include "../HAL/board.h"
-#include "../HAL/SPID.h"
+#include "../HAL/SRHL.h"
 
 typedef P_EVENT_HANDLER                         SL_P_EVENT_HANDLER;
 /*!
@@ -451,7 +451,7 @@ typedef P_EVENT_HANDLER                         SL_P_EVENT_HANDLER;
 
     \warning        
 */
-#define sl_IfOpen  SPID_IfOpen
+#define sl_IfOpen  SRHL_IfOpen
 
 /*!
     \brief      Closes an opened interface communication port
@@ -470,7 +470,7 @@ typedef P_EVENT_HANDLER                         SL_P_EVENT_HANDLER;
 
     \warning        
 */
-#define sl_IfClose 	SPID_IfClose
+#define sl_IfClose 	SRHL_IfClose
 
 /*!
     \brief      Attempts to read up to len bytes from an opened communication channel 
@@ -496,7 +496,7 @@ typedef P_EVENT_HANDLER                         SL_P_EVENT_HANDLER;
 
     \warning        
 */
-#define sl_IfRead 	SPID_IfRead
+#define sl_IfRead 	SRHL_IfRead
 
 /*!
     \brief attempts to write up to len bytes to the SPI channel
@@ -526,7 +526,7 @@ typedef P_EVENT_HANDLER                         SL_P_EVENT_HANDLER;
 
     \warning        
 */
-#define sl_IfWrite  SPID_IfWrite
+#define sl_IfWrite  SRHL_IfWrite
 
 /*!
     \brief 		register an interrupt handler routine for the host IRQ
