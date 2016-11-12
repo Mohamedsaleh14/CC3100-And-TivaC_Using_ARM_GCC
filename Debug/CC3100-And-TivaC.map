@@ -35,7 +35,7 @@ Memory Configuration
 
 Name             Origin             Length             Attributes
 FLASH            0x0000000000000000 0x0000000000040000 xr
-SRAM             0x0000000020000000 0x0000000000008000 xw
+SRAM             0x0000000020000268 0x0000000000007d98 xw
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -74,7 +74,7 @@ LOAD ./simplelink/source/wlan.o
 .vtable
  *(.vtable)
 
-.text           0x000000000000026c     0x690c
+.text           0x000000000000026c     0x6910
  CREATE_OBJECT_SYMBOLS
  *(.text)
  .text          0x000000000000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
@@ -195,657 +195,657 @@ LOAD ./simplelink/source/wlan.o
  .text.Delay    0x00000000000009c0       0x14 ./HAL/board.o
                 0x00000000000009c0                Delay
  .text.SSI2DMAConfiguration
-                0x00000000000009d4       0xbc ./HAL/uDMA.o
+                0x00000000000009d4       0xc0 ./HAL/uDMA.o
  .text.CfgDMAChSrcAdd
-                0x0000000000000a90       0x28 ./HAL/uDMA.o
+                0x0000000000000a94       0x28 ./HAL/uDMA.o
  .text.CfgDMAChDesAdd
-                0x0000000000000ab8       0x28 ./HAL/uDMA.o
+                0x0000000000000abc       0x28 ./HAL/uDMA.o
  .text.CfgDMAChContrWrd
-                0x0000000000000ae0       0x28 ./HAL/uDMA.o
+                0x0000000000000ae4       0x28 ./HAL/uDMA.o
  .text.UDMA_Init
-                0x0000000000000b08        0xc ./HAL/uDMA.o
-                0x0000000000000b08                UDMA_Init
+                0x0000000000000b0c        0xc ./HAL/uDMA.o
+                0x0000000000000b0c                UDMA_Init
  .text.UDMA_SetChSwRqt
-                0x0000000000000b14       0x24 ./HAL/uDMA.o
-                0x0000000000000b14                UDMA_SetChSwRqt
+                0x0000000000000b18       0x24 ./HAL/uDMA.o
+                0x0000000000000b18                UDMA_SetChSwRqt
  .text.UDMA_GetStatus
-                0x0000000000000b38       0xa4 ./HAL/uDMA.o
-                0x0000000000000b38                UDMA_GetStatus
+                0x0000000000000b3c       0xa4 ./HAL/uDMA.o
+                0x0000000000000b3c                UDMA_GetStatus
  .text.UDMA_GetWaitOnRqtStatus
-                0x0000000000000bdc       0x18 ./HAL/uDMA.o
-                0x0000000000000bdc                UDMA_GetWaitOnRqtStatus
+                0x0000000000000be0       0x18 ./HAL/uDMA.o
+                0x0000000000000be0                UDMA_GetWaitOnRqtStatus
  .text.UDMA_SetSSI2TxData
-                0x0000000000000bf4       0x40 ./HAL/uDMA.o
-                0x0000000000000bf4                UDMA_SetSSI2TxData
+                0x0000000000000bf8       0x40 ./HAL/uDMA.o
+                0x0000000000000bf8                UDMA_SetSSI2TxData
  .text.UDMA_UpdateSSI2RxData
-                0x0000000000000c34       0x3c ./HAL/uDMA.o
-                0x0000000000000c34                UDMA_UpdateSSI2RxData
+                0x0000000000000c38       0x3c ./HAL/uDMA.o
+                0x0000000000000c38                UDMA_UpdateSSI2RxData
  .text.UDMA_EnableAgain
-                0x0000000000000c70       0x34 ./HAL/uDMA.o
-                0x0000000000000c70                UDMA_EnableAgain
+                0x0000000000000c74       0x34 ./HAL/uDMA.o
+                0x0000000000000c74                UDMA_EnableAgain
  .text.UDMA_RxTransferSize
-                0x0000000000000ca4       0x68 ./HAL/uDMA.o
-                0x0000000000000ca4                UDMA_RxTransferSize
+                0x0000000000000ca8       0x68 ./HAL/uDMA.o
+                0x0000000000000ca8                UDMA_RxTransferSize
  .text.UDMA_TxTransferSize
-                0x0000000000000d0c       0x68 ./HAL/uDMA.o
-                0x0000000000000d0c                UDMA_TxTransferSize
+                0x0000000000000d10       0x68 ./HAL/uDMA.o
+                0x0000000000000d10                UDMA_TxTransferSize
  .text.UDMA_GetTxTransferSize
-                0x0000000000000d74       0x18 ./HAL/uDMA.o
-                0x0000000000000d74                UDMA_GetTxTransferSize
+                0x0000000000000d78       0x18 ./HAL/uDMA.o
+                0x0000000000000d78                UDMA_GetTxTransferSize
  .text.UDMA_GetRxTransferSize
-                0x0000000000000d8c       0x18 ./HAL/uDMA.o
-                0x0000000000000d8c                UDMA_GetRxTransferSize
+                0x0000000000000d90       0x18 ./HAL/uDMA.o
+                0x0000000000000d90                UDMA_GetRxTransferSize
  .text.NVIC_SetVector
-                0x0000000000000da4       0x70 ./cmsis/cmsis_nvic.o
-                0x0000000000000da4                NVIC_SetVector
+                0x0000000000000da8       0x70 ./cmsis/cmsis_nvic.o
+                0x0000000000000da8                NVIC_SetVector
  .text.NVIC_GetVector
-                0x0000000000000e14       0x30 ./cmsis/cmsis_nvic.o
-                0x0000000000000e14                NVIC_GetVector
+                0x0000000000000e18       0x30 ./cmsis/cmsis_nvic.o
+                0x0000000000000e18                NVIC_GetVector
  .text.getOscClk
-                0x0000000000000e44      0x198 ./cmsis/system_LM4F.o
+                0x0000000000000e48      0x198 ./cmsis/system_LM4F.o
  .text.SystemCoreClockUpdate
-                0x0000000000000fdc      0x114 ./cmsis/system_LM4F.o
-                0x0000000000000fdc                SystemCoreClockUpdate
+                0x0000000000000fe0      0x114 ./cmsis/system_LM4F.o
+                0x0000000000000fe0                SystemCoreClockUpdate
  .text.SystemInit
-                0x00000000000010f0       0xb8 ./cmsis/system_LM4F.o
-                0x00000000000010f0                SystemInit
+                0x00000000000010f4       0xb8 ./cmsis/system_LM4F.o
+                0x00000000000010f4                SystemInit
  .text._sl_GetStartResponseConvert
-                0x00000000000011a8       0x24 ./simplelink/source/device.o
- .text.sl_Task  0x00000000000011cc        0xc ./simplelink/source/device.o
-                0x00000000000011cc                sl_Task
+                0x00000000000011ac       0x24 ./simplelink/source/device.o
+ .text.sl_Task  0x00000000000011d0        0xc ./simplelink/source/device.o
+                0x00000000000011d0                sl_Task
  .text.sl_Start
-                0x00000000000011d8       0xe4 ./simplelink/source/device.o
-                0x00000000000011d8                sl_Start
+                0x00000000000011dc       0xe4 ./simplelink/source/device.o
+                0x00000000000011dc                sl_Start
  .text._sl_HandleAsync_InitComplete
-                0x00000000000012bc       0xa8 ./simplelink/source/device.o
-                0x00000000000012bc                _sl_HandleAsync_InitComplete
+                0x00000000000012c0       0xa8 ./simplelink/source/device.o
+                0x00000000000012c0                _sl_HandleAsync_InitComplete
  .text._sl_HandleAsync_Stop
-                0x0000000000001364       0x68 ./simplelink/source/device.o
-                0x0000000000001364                _sl_HandleAsync_Stop
- .text.sl_Stop  0x00000000000013cc       0xe4 ./simplelink/source/device.o
-                0x00000000000013cc                sl_Stop
+                0x0000000000001368       0x68 ./simplelink/source/device.o
+                0x0000000000001368                _sl_HandleAsync_Stop
+ .text.sl_Stop  0x00000000000013d0       0xe4 ./simplelink/source/device.o
+                0x00000000000013d0                sl_Stop
  .text.sl_EventMaskSet
-                0x00000000000014b0       0x58 ./simplelink/source/device.o
-                0x00000000000014b0                sl_EventMaskSet
+                0x00000000000014b4       0x58 ./simplelink/source/device.o
+                0x00000000000014b4                sl_EventMaskSet
  .text.sl_EventMaskGet
-                0x0000000000001508       0x58 ./simplelink/source/device.o
-                0x0000000000001508                sl_EventMaskGet
+                0x000000000000150c       0x58 ./simplelink/source/device.o
+                0x000000000000150c                sl_EventMaskGet
  .text.sl_DevGet
-                0x0000000000001560       0xcc ./simplelink/source/device.o
-                0x0000000000001560                sl_DevGet
+                0x0000000000001564       0xcc ./simplelink/source/device.o
+                0x0000000000001564                sl_DevGet
  .text.sl_DevSet
-                0x000000000000162c       0x8c ./simplelink/source/device.o
-                0x000000000000162c                sl_DevSet
+                0x0000000000001630       0x8c ./simplelink/source/device.o
+                0x0000000000001630                sl_DevSet
  .text._SlDrvDeviceEventHandler
-                0x00000000000016b8       0xa0 ./simplelink/source/device.o
-                0x00000000000016b8                _SlDrvDeviceEventHandler
+                0x00000000000016bc       0xa0 ./simplelink/source/device.o
+                0x00000000000016bc                _SlDrvDeviceEventHandler
  .text._SlDrvProtectAsyncRespSetting
-                0x0000000000001758       0x54 ./simplelink/source/driver.o
-                0x0000000000001758                _SlDrvProtectAsyncRespSetting
+                0x000000000000175c       0x54 ./simplelink/source/driver.o
+                0x000000000000175c                _SlDrvProtectAsyncRespSetting
  .text._SlDrvDriverCBInit
-                0x00000000000017ac      0x1cc ./simplelink/source/driver.o
-                0x00000000000017ac                _SlDrvDriverCBInit
+                0x00000000000017b0      0x1cc ./simplelink/source/driver.o
+                0x00000000000017b0                _SlDrvDriverCBInit
  .text._SlDrvDriverCBDeinit
-                0x0000000000001978      0x130 ./simplelink/source/driver.o
-                0x0000000000001978                _SlDrvDriverCBDeinit
+                0x000000000000197c      0x130 ./simplelink/source/driver.o
+                0x000000000000197c                _SlDrvDriverCBDeinit
  .text._SlDrvRxIrqHandler
-                0x0000000000001aa8       0x68 ./simplelink/source/driver.o
-                0x0000000000001aa8                _SlDrvRxIrqHandler
+                0x0000000000001aac       0x68 ./simplelink/source/driver.o
+                0x0000000000001aac                _SlDrvRxIrqHandler
  .text._SlDrvCmdOp
-                0x0000000000001b10       0xc4 ./simplelink/source/driver.o
-                0x0000000000001b10                _SlDrvCmdOp
+                0x0000000000001b14       0xc4 ./simplelink/source/driver.o
+                0x0000000000001b14                _SlDrvCmdOp
  .text._SlDrvDataReadOp
-                0x0000000000001bd4      0x210 ./simplelink/source/driver.o
-                0x0000000000001bd4                _SlDrvDataReadOp
+                0x0000000000001bd8      0x210 ./simplelink/source/driver.o
+                0x0000000000001bd8                _SlDrvDataReadOp
  .text._SlDrvDataWriteOp
-                0x0000000000001de4      0x170 ./simplelink/source/driver.o
-                0x0000000000001de4                _SlDrvDataWriteOp
+                0x0000000000001de8      0x170 ./simplelink/source/driver.o
+                0x0000000000001de8                _SlDrvDataWriteOp
  .text._SlDrvMsgWrite
-                0x0000000000001f54      0x1e0 ./simplelink/source/driver.o
+                0x0000000000001f58      0x1e0 ./simplelink/source/driver.o
  .text._SlDrvMsgRead
-                0x0000000000002134      0x5f8 ./simplelink/source/driver.o
+                0x0000000000002138      0x5f8 ./simplelink/source/driver.o
  .text._SlAsyncEventGenericHandler
-                0x000000000000272c       0xd8 ./simplelink/source/driver.o
+                0x0000000000002730       0xd8 ./simplelink/source/driver.o
  .text._SlDrvMsgReadCmdCtx
-                0x0000000000002804      0x148 ./simplelink/source/driver.o
+                0x0000000000002808      0x148 ./simplelink/source/driver.o
  .text._SlDrvMsgReadSpawnCtx
-                0x000000000000294c       0xe4 ./simplelink/source/driver.o
-                0x000000000000294c                _SlDrvMsgReadSpawnCtx
+                0x0000000000002950       0xe4 ./simplelink/source/driver.o
+                0x0000000000002950                _SlDrvMsgReadSpawnCtx
  .text._SlDrvClassifyRxMsg
-                0x0000000000002a30       0xd4 ./simplelink/source/driver.o
+                0x0000000000002a34       0xd4 ./simplelink/source/driver.o
  .text._SlDrvRxHdrRead
-                0x0000000000002b04      0x230 ./simplelink/source/driver.o
+                0x0000000000002b08      0x230 ./simplelink/source/driver.o
  .text._SlDrvBasicCmd
-                0x0000000000002d34       0x50 ./simplelink/source/driver.o
-                0x0000000000002d34                _SlDrvBasicCmd
+                0x0000000000002d38       0x50 ./simplelink/source/driver.o
+                0x0000000000002d38                _SlDrvBasicCmd
  .text._SlDrvCmdSend
-                0x0000000000002d84       0x78 ./simplelink/source/driver.o
-                0x0000000000002d84                _SlDrvCmdSend
+                0x0000000000002d88       0x78 ./simplelink/source/driver.o
+                0x0000000000002d88                _SlDrvCmdSend
  .text._SlDrvWaitForPoolObj
-                0x0000000000002dfc      0x1a4 ./simplelink/source/driver.o
-                0x0000000000002dfc                _SlDrvWaitForPoolObj
+                0x0000000000002e00      0x1a4 ./simplelink/source/driver.o
+                0x0000000000002e00                _SlDrvWaitForPoolObj
  .text._SlDrvReleasePoolObj
-                0x0000000000002fa0      0x204 ./simplelink/source/driver.o
-                0x0000000000002fa0                _SlDrvReleasePoolObj
+                0x0000000000002fa4      0x204 ./simplelink/source/driver.o
+                0x0000000000002fa4                _SlDrvReleasePoolObj
  .text._SlRemoveFromList
-                0x00000000000031a4       0xcc ./simplelink/source/driver.o
+                0x00000000000031a8       0xcc ./simplelink/source/driver.o
  .text._SlFindAndSetActiveObj
-                0x0000000000003270      0x170 ./simplelink/source/driver.o
+                0x0000000000003274      0x170 ./simplelink/source/driver.o
  .text._SlDrvSyncObjSignal
-                0x00000000000033e0       0x2c ./simplelink/source/driver.o
-                0x00000000000033e0                _SlDrvSyncObjSignal
+                0x00000000000033e4       0x2c ./simplelink/source/driver.o
+                0x00000000000033e4                _SlDrvSyncObjSignal
  .text._SlDrvObjLockWaitForever
-                0x000000000000340c       0x30 ./simplelink/source/driver.o
-                0x000000000000340c                _SlDrvObjLockWaitForever
+                0x0000000000003410       0x30 ./simplelink/source/driver.o
+                0x0000000000003410                _SlDrvObjLockWaitForever
  .text._SlDrvProtectionObjLockWaitForever
-                0x000000000000343c       0x38 ./simplelink/source/driver.o
-                0x000000000000343c                _SlDrvProtectionObjLockWaitForever
+                0x0000000000003440       0x38 ./simplelink/source/driver.o
+                0x0000000000003440                _SlDrvProtectionObjLockWaitForever
  .text._SlDrvObjUnLock
-                0x0000000000003474       0x2c ./simplelink/source/driver.o
-                0x0000000000003474                _SlDrvObjUnLock
+                0x0000000000003478       0x2c ./simplelink/source/driver.o
+                0x0000000000003478                _SlDrvObjUnLock
  .text._SlDrvProtectionObjUnLock
-                0x00000000000034a0       0x34 ./simplelink/source/driver.o
-                0x00000000000034a0                _SlDrvProtectionObjUnLock
+                0x00000000000034a4       0x34 ./simplelink/source/driver.o
+                0x00000000000034a4                _SlDrvProtectionObjUnLock
  .text._SlDrvObjGlobalLockWaitForever
-                0x00000000000034d4       0x38 ./simplelink/source/driver.o
+                0x00000000000034d8       0x38 ./simplelink/source/driver.o
  .text._SlDrvGlobalObjUnLock
-                0x000000000000350c       0x34 ./simplelink/source/driver.o
-                0x000000000000350c                _SlDrvGlobalObjUnLock
+                0x0000000000003510       0x34 ./simplelink/source/driver.o
+                0x0000000000003510                _SlDrvGlobalObjUnLock
  .text._SlDrvMemZero
-                0x0000000000003540       0x20 ./simplelink/source/driver.o
-                0x0000000000003540                _SlDrvMemZero
+                0x0000000000003544       0x20 ./simplelink/source/driver.o
+                0x0000000000003544                _SlDrvMemZero
  .text._SlDrvResetCmdExt
-                0x0000000000003560       0x18 ./simplelink/source/driver.o
-                0x0000000000003560                _SlDrvResetCmdExt
+                0x0000000000003564       0x18 ./simplelink/source/driver.o
+                0x0000000000003564                _SlDrvResetCmdExt
  .text._SlDrvSyncObjWaitForever
-                0x0000000000003578       0x34 ./simplelink/source/driver.o
-                0x0000000000003578                _SlDrvSyncObjWaitForever
+                0x000000000000357c       0x34 ./simplelink/source/driver.o
+                0x000000000000357c                _SlDrvSyncObjWaitForever
  .text._SlDrvSyncObjWaitTimeout
-                0x00000000000035ac       0x54 ./simplelink/source/driver.o
-                0x00000000000035ac                _SlDrvSyncObjWaitTimeout
+                0x00000000000035b0       0x54 ./simplelink/source/driver.o
+                0x00000000000035b0                _SlDrvSyncObjWaitTimeout
  .text._SlDriverHandleError
-                0x0000000000003600       0x8c ./simplelink/source/driver.o
-                0x0000000000003600                _SlDriverHandleError
+                0x0000000000003604       0x8c ./simplelink/source/driver.o
+                0x0000000000003604                _SlDriverHandleError
  .text._sl_Strlen
-                0x000000000000368c       0x34 ./simplelink/source/fs.o
+                0x0000000000003690       0x34 ./simplelink/source/fs.o
  .text._sl_GetCreateFsMode
-                0x00000000000036c0       0xb4 ./simplelink/source/fs.o
-                0x00000000000036c0                _sl_GetCreateFsMode
+                0x00000000000036c4       0xb4 ./simplelink/source/fs.o
+                0x00000000000036c4                _sl_GetCreateFsMode
  .text.sl_FsOpen
-                0x0000000000003774       0xa0 ./simplelink/source/fs.o
-                0x0000000000003774                sl_FsOpen
+                0x0000000000003778       0xa0 ./simplelink/source/fs.o
+                0x0000000000003778                sl_FsOpen
  .text.sl_FsClose
-                0x0000000000003814       0xb4 ./simplelink/source/fs.o
-                0x0000000000003814                sl_FsClose
+                0x0000000000003818       0xb4 ./simplelink/source/fs.o
+                0x0000000000003818                sl_FsClose
  .text.sl_FsRead
-                0x00000000000038c8       0xf8 ./simplelink/source/fs.o
-                0x00000000000038c8                sl_FsRead
+                0x00000000000038cc       0xf8 ./simplelink/source/fs.o
+                0x00000000000038cc                sl_FsRead
  .text.sl_FsWrite
-                0x00000000000039c0       0xf4 ./simplelink/source/fs.o
-                0x00000000000039c0                sl_FsWrite
+                0x00000000000039c4       0xf4 ./simplelink/source/fs.o
+                0x00000000000039c4                sl_FsWrite
  .text.sl_FsGetInfo
-                0x0000000000003ab4       0xa4 ./simplelink/source/fs.o
-                0x0000000000003ab4                sl_FsGetInfo
+                0x0000000000003ab8       0xa4 ./simplelink/source/fs.o
+                0x0000000000003ab8                sl_FsGetInfo
  .text.sl_FsDel
-                0x0000000000003b58       0x74 ./simplelink/source/fs.o
-                0x0000000000003b58                sl_FsDel
+                0x0000000000003b5c       0x74 ./simplelink/source/fs.o
+                0x0000000000003b5c                sl_FsDel
  .text.sl_NetAppStart
-                0x0000000000003bcc       0x50 ./simplelink/source/netapp.o
-                0x0000000000003bcc                sl_NetAppStart
+                0x0000000000003bd0       0x50 ./simplelink/source/netapp.o
+                0x0000000000003bd0                sl_NetAppStart
  .text.sl_NetAppStop
-                0x0000000000003c1c       0x50 ./simplelink/source/netapp.o
-                0x0000000000003c1c                sl_NetAppStop
+                0x0000000000003c20       0x50 ./simplelink/source/netapp.o
+                0x0000000000003c20                sl_NetAppStop
  .text.sl_NetAppGetServiceList
-                0x0000000000003c6c       0xd4 ./simplelink/source/netapp.o
-                0x0000000000003c6c                sl_NetAppGetServiceList
+                0x0000000000003c70       0xd4 ./simplelink/source/netapp.o
+                0x0000000000003c70                sl_NetAppGetServiceList
  .text.sl_NetAppMDNSRegisterUnregisterService
-                0x0000000000003d40      0x130 ./simplelink/source/netapp.o
-                0x0000000000003d40                sl_NetAppMDNSRegisterUnregisterService
+                0x0000000000003d44      0x130 ./simplelink/source/netapp.o
+                0x0000000000003d44                sl_NetAppMDNSRegisterUnregisterService
  .text.sl_NetAppMDNSRegisterService
-                0x0000000000003e70       0x58 ./simplelink/source/netapp.o
-                0x0000000000003e70                sl_NetAppMDNSRegisterService
+                0x0000000000003e74       0x58 ./simplelink/source/netapp.o
+                0x0000000000003e74                sl_NetAppMDNSRegisterService
  .text.sl_NetAppMDNSUnRegisterService
-                0x0000000000003ec8       0x54 ./simplelink/source/netapp.o
-                0x0000000000003ec8                sl_NetAppMDNSUnRegisterService
+                0x0000000000003ecc       0x54 ./simplelink/source/netapp.o
+                0x0000000000003ecc                sl_NetAppMDNSUnRegisterService
  .text.sl_NetAppDnsGetHostByService
-                0x0000000000003f1c      0x130 ./simplelink/source/netapp.o
-                0x0000000000003f1c                sl_NetAppDnsGetHostByService
+                0x0000000000003f20      0x130 ./simplelink/source/netapp.o
+                0x0000000000003f20                sl_NetAppDnsGetHostByService
  .text._sl_HandleAsync_DnsGetHostByService
-                0x000000000000404c       0xdc ./simplelink/source/netapp.o
-                0x000000000000404c                _sl_HandleAsync_DnsGetHostByService
+                0x0000000000004050       0xdc ./simplelink/source/netapp.o
+                0x0000000000004050                _sl_HandleAsync_DnsGetHostByService
  .text._sl_HandleAsync_DnsGetHostByAddr
-                0x0000000000004128       0x18 ./simplelink/source/netapp.o
-                0x0000000000004128                _sl_HandleAsync_DnsGetHostByAddr
+                0x000000000000412c       0x18 ./simplelink/source/netapp.o
+                0x000000000000412c                _sl_HandleAsync_DnsGetHostByAddr
  .text.sl_NetAppDnsGetHostByName
-                0x0000000000004140      0x158 ./simplelink/source/netapp.o
-                0x0000000000004140                sl_NetAppDnsGetHostByName
+                0x0000000000004144      0x158 ./simplelink/source/netapp.o
+                0x0000000000004144                sl_NetAppDnsGetHostByName
  .text._sl_HandleAsync_DnsGetHostByName
-                0x0000000000004298       0xb8 ./simplelink/source/netapp.o
-                0x0000000000004298                _sl_HandleAsync_DnsGetHostByName
+                0x000000000000429c       0xb8 ./simplelink/source/netapp.o
+                0x000000000000429c                _sl_HandleAsync_DnsGetHostByName
  .text.CopyPingResultsToReport
-                0x0000000000004350       0x44 ./simplelink/source/netapp.o
+                0x0000000000004354       0x44 ./simplelink/source/netapp.o
  .text._sl_HandleAsync_PingResponse
-                0x0000000000004394       0xb4 ./simplelink/source/netapp.o
-                0x0000000000004394                _sl_HandleAsync_PingResponse
+                0x0000000000004398       0xb4 ./simplelink/source/netapp.o
+                0x0000000000004398                _sl_HandleAsync_PingResponse
  .text.sl_NetAppPingStart
-                0x0000000000004448      0x1ec ./simplelink/source/netapp.o
-                0x0000000000004448                sl_NetAppPingStart
+                0x000000000000444c      0x1ec ./simplelink/source/netapp.o
+                0x000000000000444c                sl_NetAppPingStart
  .text.sl_NetAppSet
-                0x0000000000004634       0x8c ./simplelink/source/netapp.o
-                0x0000000000004634                sl_NetAppSet
+                0x0000000000004638       0x8c ./simplelink/source/netapp.o
+                0x0000000000004638                sl_NetAppSet
  .text.sl_NetAppGet
-                0x00000000000046c0       0xb0 ./simplelink/source/netapp.o
-                0x00000000000046c0                sl_NetAppGet
+                0x00000000000046c4       0xb0 ./simplelink/source/netapp.o
+                0x00000000000046c4                sl_NetAppGet
  .text._SlDrvNetAppEventHandler
-                0x0000000000004770       0x6c ./simplelink/source/netapp.o
-                0x0000000000004770                _SlDrvNetAppEventHandler
+                0x0000000000004774       0x6c ./simplelink/source/netapp.o
+                0x0000000000004774                _SlDrvNetAppEventHandler
  .text.sl_NetCfgSet
-                0x00000000000047dc       0x8c ./simplelink/source/netcfg.o
-                0x00000000000047dc                sl_NetCfgSet
+                0x00000000000047e0       0x8c ./simplelink/source/netcfg.o
+                0x00000000000047e0                sl_NetCfgSet
  .text.sl_NetCfgGet
-                0x0000000000004868       0xd4 ./simplelink/source/netcfg.o
-                0x0000000000004868                sl_NetCfgGet
+                0x000000000000486c       0xd4 ./simplelink/source/netcfg.o
+                0x000000000000486c                sl_NetCfgGet
  .text._SlNonOsSemSet
-                0x000000000000493c       0x24 ./simplelink/source/nonos.o
-                0x000000000000493c                _SlNonOsSemSet
+                0x0000000000004940       0x24 ./simplelink/source/nonos.o
+                0x0000000000004940                _SlNonOsSemSet
  .text._SlNonOsSemGet
-                0x0000000000004960       0x7c ./simplelink/source/nonos.o
-                0x0000000000004960                _SlNonOsSemGet
+                0x0000000000004964       0x7c ./simplelink/source/nonos.o
+                0x0000000000004964                _SlNonOsSemGet
  .text._SlNonOsSpawn
-                0x00000000000049dc       0x6c ./simplelink/source/nonos.o
-                0x00000000000049dc                _SlNonOsSpawn
+                0x00000000000049e0       0x6c ./simplelink/source/nonos.o
+                0x00000000000049e0                _SlNonOsSpawn
  .text._SlNonOsMainLoopTask
-                0x0000000000004a48       0x70 ./simplelink/source/nonos.o
-                0x0000000000004a48                _SlNonOsMainLoopTask
+                0x0000000000004a4c       0x70 ./simplelink/source/nonos.o
+                0x0000000000004a4c                _SlNonOsMainLoopTask
  .text._sl_BuildAddress
-                0x0000000000004ab8       0x58 ./simplelink/source/socket.o
+                0x0000000000004abc       0x58 ./simplelink/source/socket.o
  .text._sl_TruncatePayloadByProtocol
-                0x0000000000004b10       0x44 ./simplelink/source/socket.o
+                0x0000000000004b14       0x44 ./simplelink/source/socket.o
  .text._sl_ParseAddress
-                0x0000000000004b54       0x64 ./simplelink/source/socket.o
-                0x0000000000004b54                _sl_ParseAddress
+                0x0000000000004b58       0x64 ./simplelink/source/socket.o
+                0x0000000000004b58                _sl_ParseAddress
  .text.sl_Socket
-                0x0000000000004bb8       0x74 ./simplelink/source/socket.o
-                0x0000000000004bb8                sl_Socket
+                0x0000000000004bbc       0x74 ./simplelink/source/socket.o
+                0x0000000000004bbc                sl_Socket
  .text.sl_Close
-                0x0000000000004c2c       0x54 ./simplelink/source/socket.o
-                0x0000000000004c2c                sl_Close
- .text.sl_Bind  0x0000000000004c80       0xa0 ./simplelink/source/socket.o
-                0x0000000000004c80                sl_Bind
+                0x0000000000004c30       0x54 ./simplelink/source/socket.o
+                0x0000000000004c30                sl_Close
+ .text.sl_Bind  0x0000000000004c84       0xa0 ./simplelink/source/socket.o
+                0x0000000000004c84                sl_Bind
  .text.sl_SendTo
-                0x0000000000004d20      0x130 ./simplelink/source/socket.o
-                0x0000000000004d20                sl_SendTo
+                0x0000000000004d24      0x130 ./simplelink/source/socket.o
+                0x0000000000004d24                sl_SendTo
  .text.sl_RecvFrom
-                0x0000000000004e50      0x12c ./simplelink/source/socket.o
-                0x0000000000004e50                sl_RecvFrom
+                0x0000000000004e54      0x12c ./simplelink/source/socket.o
+                0x0000000000004e54                sl_RecvFrom
  .text.sl_Connect
-                0x0000000000004f7c      0x180 ./simplelink/source/socket.o
-                0x0000000000004f7c                sl_Connect
+                0x0000000000004f80      0x180 ./simplelink/source/socket.o
+                0x0000000000004f80                sl_Connect
  .text._sl_HandleAsync_Connect
-                0x00000000000050fc       0x9c ./simplelink/source/socket.o
-                0x00000000000050fc                _sl_HandleAsync_Connect
- .text.sl_Send  0x0000000000005198      0x120 ./simplelink/source/socket.o
-                0x0000000000005198                sl_Send
+                0x0000000000005100       0x9c ./simplelink/source/socket.o
+                0x0000000000005100                _sl_HandleAsync_Connect
+ .text.sl_Send  0x000000000000519c      0x120 ./simplelink/source/socket.o
+                0x000000000000519c                sl_Send
  .text.sl_Listen
-                0x00000000000052b8       0x60 ./simplelink/source/socket.o
-                0x00000000000052b8                sl_Listen
+                0x00000000000052bc       0x60 ./simplelink/source/socket.o
+                0x00000000000052bc                sl_Listen
  .text.sl_Accept
-                0x0000000000005318      0x1b4 ./simplelink/source/socket.o
-                0x0000000000005318                sl_Accept
+                0x000000000000531c      0x1b4 ./simplelink/source/socket.o
+                0x000000000000531c                sl_Accept
  .text.sl_Htonl
-                0x00000000000054cc       0x50 ./simplelink/source/socket.o
-                0x00000000000054cc                sl_Htonl
+                0x00000000000054d0       0x50 ./simplelink/source/socket.o
+                0x00000000000054d0                sl_Htonl
  .text.sl_Htons
-                0x000000000000551c       0x44 ./simplelink/source/socket.o
-                0x000000000000551c                sl_Htons
+                0x0000000000005520       0x44 ./simplelink/source/socket.o
+                0x0000000000005520                sl_Htons
  .text._sl_HandleAsync_Accept
-                0x0000000000005560       0x80 ./simplelink/source/socket.o
-                0x0000000000005560                _sl_HandleAsync_Accept
+                0x0000000000005564       0x80 ./simplelink/source/socket.o
+                0x0000000000005564                _sl_HandleAsync_Accept
  .text._sl_HandleAsync_Select
-                0x00000000000055e0       0x6c ./simplelink/source/socket.o
-                0x00000000000055e0                _sl_HandleAsync_Select
- .text.sl_Recv  0x000000000000564c       0x94 ./simplelink/source/socket.o
-                0x000000000000564c                sl_Recv
+                0x00000000000055e4       0x6c ./simplelink/source/socket.o
+                0x00000000000055e4                _sl_HandleAsync_Select
+ .text.sl_Recv  0x0000000000005650       0x94 ./simplelink/source/socket.o
+                0x0000000000005650                sl_Recv
  .text.sl_SetSockOpt
-                0x00000000000056e0       0x8c ./simplelink/source/socket.o
-                0x00000000000056e0                sl_SetSockOpt
+                0x00000000000056e4       0x8c ./simplelink/source/socket.o
+                0x00000000000056e4                sl_SetSockOpt
  .text.sl_GetSockOpt
-                0x000000000000576c       0xc8 ./simplelink/source/socket.o
-                0x000000000000576c                sl_GetSockOpt
+                0x0000000000005770       0xc8 ./simplelink/source/socket.o
+                0x0000000000005770                sl_GetSockOpt
  .text.sl_Select
-                0x0000000000005834      0x168 ./simplelink/source/socket.o
-                0x0000000000005834                sl_Select
+                0x0000000000005838      0x168 ./simplelink/source/socket.o
+                0x0000000000005838                sl_Select
  .text.SL_FD_SET
-                0x000000000000599c       0x2c ./simplelink/source/socket.o
-                0x000000000000599c                SL_FD_SET
+                0x00000000000059a0       0x2c ./simplelink/source/socket.o
+                0x00000000000059a0                SL_FD_SET
  .text.SL_FD_CLR
-                0x00000000000059c8       0x30 ./simplelink/source/socket.o
-                0x00000000000059c8                SL_FD_CLR
+                0x00000000000059cc       0x30 ./simplelink/source/socket.o
+                0x00000000000059cc                SL_FD_CLR
  .text.SL_FD_ISSET
-                0x00000000000059f8       0x38 ./simplelink/source/socket.o
-                0x00000000000059f8                SL_FD_ISSET
+                0x00000000000059fc       0x38 ./simplelink/source/socket.o
+                0x00000000000059fc                SL_FD_ISSET
  .text.SL_FD_ZERO
-                0x0000000000005a30       0x18 ./simplelink/source/socket.o
-                0x0000000000005a30                SL_FD_ZERO
+                0x0000000000005a34       0x18 ./simplelink/source/socket.o
+                0x0000000000005a34                SL_FD_ZERO
  .text.sl_WlanConnect
-                0x0000000000005a48      0x2c8 ./simplelink/source/wlan.o
-                0x0000000000005a48                sl_WlanConnect
+                0x0000000000005a4c      0x2c8 ./simplelink/source/wlan.o
+                0x0000000000005a4c                sl_WlanConnect
  .text.sl_WlanDisconnect
-                0x0000000000005d10       0x28 ./simplelink/source/wlan.o
-                0x0000000000005d10                sl_WlanDisconnect
+                0x0000000000005d14       0x28 ./simplelink/source/wlan.o
+                0x0000000000005d14                sl_WlanDisconnect
  .text.sl_WlanPolicySet
-                0x0000000000005d38       0x7c ./simplelink/source/wlan.o
-                0x0000000000005d38                sl_WlanPolicySet
+                0x0000000000005d3c       0x7c ./simplelink/source/wlan.o
+                0x0000000000005d3c                sl_WlanPolicySet
  .text.sl_WlanPolicyGet
-                0x0000000000005db4       0xc0 ./simplelink/source/wlan.o
-                0x0000000000005db4                sl_WlanPolicyGet
+                0x0000000000005db8       0xc0 ./simplelink/source/wlan.o
+                0x0000000000005db8                sl_WlanPolicyGet
  .text.sl_WlanProfileAdd
-                0x0000000000005e74      0x304 ./simplelink/source/wlan.o
-                0x0000000000005e74                sl_WlanProfileAdd
+                0x0000000000005e78      0x304 ./simplelink/source/wlan.o
+                0x0000000000005e78                sl_WlanProfileAdd
  .text.sl_WlanProfileGet
-                0x0000000000006178      0x144 ./simplelink/source/wlan.o
-                0x0000000000006178                sl_WlanProfileGet
+                0x000000000000617c      0x144 ./simplelink/source/wlan.o
+                0x000000000000617c                sl_WlanProfileGet
  .text.sl_WlanProfileDel
-                0x00000000000062bc       0x54 ./simplelink/source/wlan.o
-                0x00000000000062bc                sl_WlanProfileDel
+                0x00000000000062c0       0x54 ./simplelink/source/wlan.o
+                0x00000000000062c0                sl_WlanProfileDel
  .text.sl_WlanGetNetworkList
-                0x0000000000006310       0x98 ./simplelink/source/wlan.o
-                0x0000000000006310                sl_WlanGetNetworkList
+                0x0000000000006314       0x98 ./simplelink/source/wlan.o
+                0x0000000000006314                sl_WlanGetNetworkList
  .text.sl_WlanRxFilterAdd
-                0x00000000000063a8       0x98 ./simplelink/source/wlan.o
-                0x00000000000063a8                sl_WlanRxFilterAdd
+                0x00000000000063ac       0x98 ./simplelink/source/wlan.o
+                0x00000000000063ac                sl_WlanRxFilterAdd
  .text.sl_WlanRxFilterSet
-                0x0000000000006440       0x74 ./simplelink/source/wlan.o
-                0x0000000000006440                sl_WlanRxFilterSet
+                0x0000000000006444       0x74 ./simplelink/source/wlan.o
+                0x0000000000006444                sl_WlanRxFilterSet
  .text.sl_WlanRxFilterGet
-                0x00000000000064b4       0x90 ./simplelink/source/wlan.o
-                0x00000000000064b4                sl_WlanRxFilterGet
+                0x00000000000064b8       0x90 ./simplelink/source/wlan.o
+                0x00000000000064b8                sl_WlanRxFilterGet
  .text.sl_WlanRxStatStart
-                0x0000000000006544       0x28 ./simplelink/source/wlan.o
-                0x0000000000006544                sl_WlanRxStatStart
+                0x0000000000006548       0x28 ./simplelink/source/wlan.o
+                0x0000000000006548                sl_WlanRxStatStart
  .text.sl_WlanRxStatStop
-                0x000000000000656c       0x28 ./simplelink/source/wlan.o
-                0x000000000000656c                sl_WlanRxStatStop
+                0x0000000000006570       0x28 ./simplelink/source/wlan.o
+                0x0000000000006570                sl_WlanRxStatStop
  .text.sl_WlanRxStatGet
-                0x0000000000006594       0x60 ./simplelink/source/wlan.o
-                0x0000000000006594                sl_WlanRxStatGet
+                0x0000000000006598       0x60 ./simplelink/source/wlan.o
+                0x0000000000006598                sl_WlanRxStatGet
  .text.sl_WlanSmartConfigStop
-                0x00000000000065f4       0x28 ./simplelink/source/wlan.o
-                0x00000000000065f4                sl_WlanSmartConfigStop
+                0x00000000000065f8       0x28 ./simplelink/source/wlan.o
+                0x00000000000065f8                sl_WlanSmartConfigStop
  .text.sl_WlanSmartConfigStart
-                0x000000000000661c       0xc8 ./simplelink/source/wlan.o
-                0x000000000000661c                sl_WlanSmartConfigStart
+                0x0000000000006620       0xc8 ./simplelink/source/wlan.o
+                0x0000000000006620                sl_WlanSmartConfigStart
  .text.sl_WlanSetMode
-                0x00000000000066e4       0x50 ./simplelink/source/wlan.o
-                0x00000000000066e4                sl_WlanSetMode
+                0x00000000000066e8       0x50 ./simplelink/source/wlan.o
+                0x00000000000066e8                sl_WlanSetMode
  .text.sl_WlanSet
-                0x0000000000006734       0x84 ./simplelink/source/wlan.o
-                0x0000000000006734                sl_WlanSet
+                0x0000000000006738       0x84 ./simplelink/source/wlan.o
+                0x0000000000006738                sl_WlanSet
  .text.sl_WlanGet
-                0x00000000000067b8       0xc8 ./simplelink/source/wlan.o
-                0x00000000000067b8                sl_WlanGet
- .text.exit     0x0000000000006880       0x20 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-exit.o)
-                0x0000000000006880                exit
+                0x00000000000067bc       0xc8 ./simplelink/source/wlan.o
+                0x00000000000067bc                sl_WlanGet
+ .text.exit     0x0000000000006884       0x20 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-exit.o)
+                0x0000000000006884                exit
  .text.__libc_init_array
-                0x00000000000068a0       0x50 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-init.o)
-                0x00000000000068a0                __libc_init_array
- .text.memset   0x00000000000068f0       0x9c /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
-                0x00000000000068f0                memset
+                0x00000000000068a4       0x50 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-init.o)
+                0x00000000000068a4                __libc_init_array
+ .text.memset   0x00000000000068f4       0x9c /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
+                0x00000000000068f4                memset
  .text.startup.register_fini
-                0x000000000000698c       0x14 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
+                0x0000000000006990       0x14 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
  .text.__call_exitprocs
-                0x00000000000069a0       0xd4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
-                0x00000000000069a0                __call_exitprocs
- .text.atexit   0x0000000000006a74        0xc /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-atexit.o)
-                0x0000000000006a74                atexit
+                0x00000000000069a4       0xd4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
+                0x00000000000069a4                __call_exitprocs
+ .text.atexit   0x0000000000006a78        0xc /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-atexit.o)
+                0x0000000000006a78                atexit
  .text.__libc_fini_array
-                0x0000000000006a80       0x2c /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-fini.o)
-                0x0000000000006a80                __libc_fini_array
+                0x0000000000006a84       0x2c /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-fini.o)
+                0x0000000000006a84                __libc_fini_array
  .text.__register_exitproc
-                0x0000000000006aac       0xa4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__atexit.o)
-                0x0000000000006aac                __register_exitproc
- .text._exit    0x0000000000006b50        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
-                0x0000000000006b50                _exit
-                0x0000000000006b54                . = ALIGN (0x4)
+                0x0000000000006ab0       0xa4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__atexit.o)
+                0x0000000000006ab0                __register_exitproc
+ .text._exit    0x0000000000006b54        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+                0x0000000000006b54                _exit
+                0x0000000000006b58                . = ALIGN (0x4)
  *(.ctors)
-                0x0000000000006b54                . = ALIGN (0x4)
+                0x0000000000006b58                . = ALIGN (0x4)
  *(.dtors)
-                0x0000000000006b54                . = ALIGN (0x4)
-                0x0000000000006b54                __init_array_start = .
+                0x0000000000006b58                . = ALIGN (0x4)
+                0x0000000000006b58                __init_array_start = .
  *(.init_array*)
- .init_array    0x0000000000006b54        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .init_array    0x0000000000006b58        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
  .init_array.00000
-                0x0000000000006b58        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
-                0x0000000000006b5c                __init_array_end = .
+                0x0000000000006b5c        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
+                0x0000000000006b60                __init_array_end = .
  *(.init)
- .init          0x0000000000006b5c        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
-                0x0000000000006b5c                _init
- .init          0x0000000000006b60        0x8 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ .init          0x0000000000006b60        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+                0x0000000000006b60                _init
+ .init          0x0000000000006b64        0x8 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
  *(.fini*)
- .fini          0x0000000000006b68        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
-                0x0000000000006b68                _fini
- .fini_array    0x0000000000006b6c        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
- .fini          0x0000000000006b70        0x8 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
-                0x0000000000006b78                PROVIDE (__etext, .)
-                0x0000000000006b78                PROVIDE (_etext, .)
-                0x0000000000006b78                PROVIDE (etext, .)
+ .fini          0x0000000000006b6c        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+                0x0000000000006b6c                _fini
+ .fini_array    0x0000000000006b70        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .fini          0x0000000000006b74        0x8 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+                0x0000000000006b7c                PROVIDE (__etext, .)
+                0x0000000000006b7c                PROVIDE (_etext, .)
+                0x0000000000006b7c                PROVIDE (etext, .)
 
-.glue_7         0x0000000000006b78        0x0
+.glue_7         0x0000000000006b7c        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000006b78        0x0
+.glue_7t        0x0000000000006b7c        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000006b78        0x0
+.vfp11_veneer   0x0000000000006b7c        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000006b78        0x0
+.v4_bx          0x0000000000006b7c        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000006b78        0x0
+.iplt           0x0000000000006b7c        0x0
  .iplt          0x0000000000000000        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
-.rodata         0x0000000000006b78      0x18c
+.rodata         0x0000000000006b7c      0x18c
  *(.rodata)
- .rodata        0x0000000000006b78       0x14 ./simplelink/source/fs.o
- .rodata        0x0000000000006b8c        0x4 ./simplelink/source/netapp.o
- .rodata        0x0000000000006b90        0x4 ./simplelink/source/wlan.o
+ .rodata        0x0000000000006b7c       0x14 ./simplelink/source/fs.o
+ .rodata        0x0000000000006b90        0x4 ./simplelink/source/netapp.o
+ .rodata        0x0000000000006b94        0x4 ./simplelink/source/wlan.o
  *(.rodata*)
  .rodata.StartResponseLUT
-                0x0000000000006b94        0x8 ./simplelink/source/device.o
+                0x0000000000006b98        0x8 ./simplelink/source/device.o
  .rodata._SlStopCmdCtrl
-                0x0000000000006b9c        0x4 ./simplelink/source/device.o
- .rodata._SlEventMaskSetCmdCtrl
                 0x0000000000006ba0        0x4 ./simplelink/source/device.o
- .rodata._SlEventMaskGetCmdCtrl
+ .rodata._SlEventMaskSetCmdCtrl
                 0x0000000000006ba4        0x4 ./simplelink/source/device.o
- .rodata._SlDeviceGetCmdCtrl
+ .rodata._SlEventMaskGetCmdCtrl
                 0x0000000000006ba8        0x4 ./simplelink/source/device.o
- .rodata._SlDeviceSetCmdCtrl
+ .rodata._SlDeviceGetCmdCtrl
                 0x0000000000006bac        0x4 ./simplelink/source/device.o
+ .rodata._SlDeviceSetCmdCtrl
+                0x0000000000006bb0        0x4 ./simplelink/source/device.o
  .rodata.g_H2NSyncPattern
-                0x0000000000006bb0        0x8 ./simplelink/source/driver.o
+                0x0000000000006bb4        0x8 ./simplelink/source/driver.o
  .rodata.g_H2NCnysPattern
-                0x0000000000006bb8        0x8 ./simplelink/source/driver.o
+                0x0000000000006bbc        0x8 ./simplelink/source/driver.o
  .rodata._SlActionLookupTable
-                0x0000000000006bc0       0x38 ./simplelink/source/driver.o
-                0x0000000000006bc0                _SlActionLookupTable
+                0x0000000000006bc4       0x38 ./simplelink/source/driver.o
+                0x0000000000006bc4                _SlActionLookupTable
  .rodata.OpcodeTranslateTable
-                0x0000000000006bf8       0x3c ./simplelink/source/driver.o
-                0x0000000000006bf8                OpcodeTranslateTable
+                0x0000000000006bfc       0x3c ./simplelink/source/driver.o
+                0x0000000000006bfc                OpcodeTranslateTable
  .rodata.RxMsgClassLUT
-                0x0000000000006c34       0x20 ./simplelink/source/driver.o
+                0x0000000000006c38       0x20 ./simplelink/source/driver.o
  .rodata._SlFsOpenCmdCtrl
-                0x0000000000006c54        0x4 ./simplelink/source/fs.o
- .rodata._SlFsCloseCmdCtrl
                 0x0000000000006c58        0x4 ./simplelink/source/fs.o
- .rodata._SlFsReadCmdCtrl
+ .rodata._SlFsCloseCmdCtrl
                 0x0000000000006c5c        0x4 ./simplelink/source/fs.o
- .rodata._SlFsWriteCmdCtrl
+ .rodata._SlFsReadCmdCtrl
                 0x0000000000006c60        0x4 ./simplelink/source/fs.o
- .rodata._SlFsGetInfoCmdCtrl
+ .rodata._SlFsWriteCmdCtrl
                 0x0000000000006c64        0x4 ./simplelink/source/fs.o
- .rodata._SlFsDeleteCmdCtrl
+ .rodata._SlFsGetInfoCmdCtrl
                 0x0000000000006c68        0x4 ./simplelink/source/fs.o
+ .rodata._SlFsDeleteCmdCtrl
+                0x0000000000006c6c        0x4 ./simplelink/source/fs.o
  .rodata._SlNetAppStartCtrl
-                0x0000000000006c6c        0x4 ./simplelink/source/netapp.o
- .rodata._SlNetAppStopCtrl
                 0x0000000000006c70        0x4 ./simplelink/source/netapp.o
- .rodata._SlGetServiceListeCtrl
+ .rodata._SlNetAppStopCtrl
                 0x0000000000006c74        0x4 ./simplelink/source/netapp.o
- .rodata._SlRegisterServiceCtrl
+ .rodata._SlGetServiceListeCtrl
                 0x0000000000006c78        0x4 ./simplelink/source/netapp.o
- .rodata._SlGetHostByServiceCtrl
+ .rodata._SlRegisterServiceCtrl
                 0x0000000000006c7c        0x4 ./simplelink/source/netapp.o
- .rodata._SlGetHostByNameCtrl
+ .rodata._SlGetHostByServiceCtrl
                 0x0000000000006c80        0x4 ./simplelink/source/netapp.o
- .rodata._SlNetAppSetCmdCtrl
+ .rodata._SlGetHostByNameCtrl
                 0x0000000000006c84        0x4 ./simplelink/source/netapp.o
- .rodata._SlNetAppGetCmdCtrl
+ .rodata._SlNetAppSetCmdCtrl
                 0x0000000000006c88        0x4 ./simplelink/source/netapp.o
+ .rodata._SlNetAppGetCmdCtrl
+                0x0000000000006c8c        0x4 ./simplelink/source/netapp.o
  .rodata._SlNetCfgSetCmdCtrl
-                0x0000000000006c8c        0x4 ./simplelink/source/netcfg.o
- .rodata._SlNetCfgGetCmdCtrl
                 0x0000000000006c90        0x4 ./simplelink/source/netcfg.o
+ .rodata._SlNetCfgGetCmdCtrl
+                0x0000000000006c94        0x4 ./simplelink/source/netcfg.o
  .rodata._SlPayloadByProtocolLUT
-                0x0000000000006c94       0x10 ./simplelink/source/socket.o
+                0x0000000000006c98       0x10 ./simplelink/source/socket.o
  .rodata._SlSockSocketCmdCtrl
-                0x0000000000006ca4        0x4 ./simplelink/source/socket.o
- .rodata._SlSockCloseCmdCtrl
                 0x0000000000006ca8        0x4 ./simplelink/source/socket.o
- .rodata._SlRecvfomCmdCtrl
+ .rodata._SlSockCloseCmdCtrl
                 0x0000000000006cac        0x4 ./simplelink/source/socket.o
- .rodata._SlSendCmdCtrl
+ .rodata._SlRecvfomCmdCtrl
                 0x0000000000006cb0        0x4 ./simplelink/source/socket.o
- .rodata._SlListenCmdCtrl
+ .rodata._SlSendCmdCtrl
                 0x0000000000006cb4        0x4 ./simplelink/source/socket.o
- .rodata._SlAcceptCmdCtrl
+ .rodata._SlListenCmdCtrl
                 0x0000000000006cb8        0x4 ./simplelink/source/socket.o
- .rodata._SlRecvCmdCtrl
+ .rodata._SlAcceptCmdCtrl
                 0x0000000000006cbc        0x4 ./simplelink/source/socket.o
- .rodata._SlSetSockOptCmdCtrl
+ .rodata._SlRecvCmdCtrl
                 0x0000000000006cc0        0x4 ./simplelink/source/socket.o
- .rodata._SlGetSockOptCmdCtrl
+ .rodata._SlSetSockOptCmdCtrl
                 0x0000000000006cc4        0x4 ./simplelink/source/socket.o
- .rodata._SlSelectCmdCtrl
+ .rodata._SlGetSockOptCmdCtrl
                 0x0000000000006cc8        0x4 ./simplelink/source/socket.o
+ .rodata._SlSelectCmdCtrl
+                0x0000000000006ccc        0x4 ./simplelink/source/socket.o
  .rodata._SlPolicySetCmdCtrl
-                0x0000000000006ccc        0x4 ./simplelink/source/wlan.o
- .rodata._SlPolicyGetCmdCtrl
                 0x0000000000006cd0        0x4 ./simplelink/source/wlan.o
- .rodata._SlProfileGetCmdCtrl
+ .rodata._SlPolicyGetCmdCtrl
                 0x0000000000006cd4        0x4 ./simplelink/source/wlan.o
- .rodata._SlProfileDelCmdCtrl
+ .rodata._SlProfileGetCmdCtrl
                 0x0000000000006cd8        0x4 ./simplelink/source/wlan.o
- .rodata._SlWlanGetNetworkListCtrl
+ .rodata._SlProfileDelCmdCtrl
                 0x0000000000006cdc        0x4 ./simplelink/source/wlan.o
- .rodata._SlRxFilterAddtCmdCtrl
+ .rodata._SlWlanGetNetworkListCtrl
                 0x0000000000006ce0        0x4 ./simplelink/source/wlan.o
- .rodata._SlRxFilterSetCmdCtrl
+ .rodata._SlRxFilterAddtCmdCtrl
                 0x0000000000006ce4        0x4 ./simplelink/source/wlan.o
- .rodata._SlRxFilterGetCmdCtrl
+ .rodata._SlRxFilterSetCmdCtrl
                 0x0000000000006ce8        0x4 ./simplelink/source/wlan.o
- .rodata._SlSmartConfigStartCmdCtrl
+ .rodata._SlRxFilterGetCmdCtrl
                 0x0000000000006cec        0x4 ./simplelink/source/wlan.o
- .rodata._SlWlanSetModeCmdCtrl
+ .rodata._SlSmartConfigStartCmdCtrl
                 0x0000000000006cf0        0x4 ./simplelink/source/wlan.o
- .rodata._SlWlanCfgSetCmdCtrl
+ .rodata._SlWlanSetModeCmdCtrl
                 0x0000000000006cf4        0x4 ./simplelink/source/wlan.o
- .rodata._SlWlanCfgGetCmdCtrl
+ .rodata._SlWlanCfgSetCmdCtrl
                 0x0000000000006cf8        0x4 ./simplelink/source/wlan.o
+ .rodata._SlWlanCfgGetCmdCtrl
+                0x0000000000006cfc        0x4 ./simplelink/source/wlan.o
  .rodata.str1.4
-                0x0000000000006cfc        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
+                0x0000000000006d00        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
                                           0x2 (size before relaxing)
  .rodata._global_impure_ptr
-                0x0000000000006d00        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
-                0x0000000000006d00                _global_impure_ptr
+                0x0000000000006d04        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
+                0x0000000000006d04                _global_impure_ptr
 
-.eh_frame       0x0000000000006d04        0x4
- .eh_frame      0x0000000000006d04        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
- .eh_frame      0x0000000000006d04        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+.eh_frame       0x0000000000006d08        0x4
+ .eh_frame      0x0000000000006d08        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x0000000000006d08        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
 
-.data           0x0000000020000000      0x444 load address 0x0000000000006d08
-                0x0000000000006d08                __data_load__ = LOADADDR (.data)
-                0x0000000020000000                __data_start__ = .
+.data           0x0000000020000268      0x444 load address 0x0000000000006d0c
+                0x0000000000006d0c                __data_load__ = LOADADDR (.data)
+                0x0000000020000268                __data_start__ = .
  *(.data)
- .data          0x0000000020000000        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
- .data          0x0000000020000000        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
-                0x0000000020000000                __dso_handle
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
- .data          0x0000000020000004        0x0 ./main.o
- .data          0x0000000020000004        0x0 ./tm4c123gh6pm_startup_ccs_gcc.o
- .data          0x0000000020000004        0x0 ./ERRH/ERRH.o
- .data          0x0000000020000004        0x0 ./HAL/SPID.o
- .data          0x0000000020000004        0x0 ./HAL/SRHL.o
- .data          0x0000000020000004        0x0 ./HAL/TIMD.o
- .data          0x0000000020000004        0x0 ./HAL/board.o
- .data          0x0000000020000004        0x0 ./HAL/uDMA.o
- .data          0x0000000020000004        0x0 ./cmsis/cmsis_nvic.o
- .data          0x0000000020000004        0x0 ./cmsis/system_LM4F.o
- .data          0x0000000020000004        0x0 ./simplelink/source/device.o
- .data          0x0000000020000004        0x0 ./simplelink/source/driver.o
- .data          0x0000000020000004        0x0 ./simplelink/source/flowcont.o
- .data          0x0000000020000004        0x0 ./simplelink/source/fs.o
- .data          0x0000000020000004        0x0 ./simplelink/source/netapp.o
- .data          0x0000000020000004        0x0 ./simplelink/source/netcfg.o
- .data          0x0000000020000004        0x0 ./simplelink/source/nonos.o
- .data          0x0000000020000004        0x0 ./simplelink/source/socket.o
- .data          0x0000000020000004        0x0 ./simplelink/source/spawn.o
- .data          0x0000000020000004        0x0 ./simplelink/source/wlan.o
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-exit.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-init.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memcpy.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-atexit.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-fini.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__atexit.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
- .data          0x0000000020000004        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ .data          0x0000000020000268        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+ .data          0x0000000020000268        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+                0x0000000020000268                __dso_handle
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .data          0x000000002000026c        0x0 ./main.o
+ .data          0x000000002000026c        0x0 ./tm4c123gh6pm_startup_ccs_gcc.o
+ .data          0x000000002000026c        0x0 ./ERRH/ERRH.o
+ .data          0x000000002000026c        0x0 ./HAL/SPID.o
+ .data          0x000000002000026c        0x0 ./HAL/SRHL.o
+ .data          0x000000002000026c        0x0 ./HAL/TIMD.o
+ .data          0x000000002000026c        0x0 ./HAL/board.o
+ .data          0x000000002000026c        0x0 ./HAL/uDMA.o
+ .data          0x000000002000026c        0x0 ./cmsis/cmsis_nvic.o
+ .data          0x000000002000026c        0x0 ./cmsis/system_LM4F.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/device.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/driver.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/flowcont.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/fs.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/netapp.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/netcfg.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/nonos.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/socket.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/spawn.o
+ .data          0x000000002000026c        0x0 ./simplelink/source/wlan.o
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-exit.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-init.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memcpy.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__call_atexit.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-atexit.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-fini.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-__atexit.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+ .data          0x000000002000026c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
  *(.data*)
  .data.first_entry.5709
-                0x0000000020000004        0x1 ./HAL/SPID.o
+                0x000000002000026c        0x1 ./HAL/SPID.o
  .data.tx_transfer_size
-                0x0000000020000005        0x1 ./HAL/uDMA.o
+                0x000000002000026d        0x1 ./HAL/uDMA.o
  .data.rx_transfer_size
-                0x0000000020000006        0x1 ./HAL/uDMA.o
- *fill*         0x0000000020000007        0x1 
+                0x000000002000026e        0x1 ./HAL/uDMA.o
+ *fill*         0x000000002000026f        0x1 
  .data.control_word_ch12
-                0x0000000020000008        0x4 ./HAL/uDMA.o
+                0x0000000020000270        0x4 ./HAL/uDMA.o
  .data.control_word_ch13
-                0x000000002000000c        0x4 ./HAL/uDMA.o
+                0x0000000020000274        0x4 ./HAL/uDMA.o
  .data.SystemCoreClock
-                0x0000000020000010        0x4 ./cmsis/system_LM4F.o
-                0x0000000020000010                SystemCoreClock
- *fill*         0x0000000020000014        0x4 
+                0x0000000020000278        0x4 ./cmsis/system_LM4F.o
+                0x0000000020000278                SystemCoreClock
+ *fill*         0x000000002000027c        0x4 
  .data.impure_data
-                0x0000000020000018      0x428 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
+                0x0000000020000280      0x428 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
  .data._impure_ptr
-                0x0000000020000440        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
-                0x0000000020000440                _impure_ptr
-                0x0000000020000444                . = ALIGN (0x4)
-                0x0000000020000444                __data_end__ = .
+                0x00000000200006a8        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-impure.o)
+                0x00000000200006a8                _impure_ptr
+                0x00000000200006ac                . = ALIGN (0x4)
+                0x00000000200006ac                __data_end__ = .
 
-.jcr            0x0000000020000444        0x4 load address 0x000000000000714c
- .jcr           0x0000000020000444        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
- .jcr           0x0000000020000444        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+.jcr            0x00000000200006ac        0x4 load address 0x0000000000007150
+ .jcr           0x00000000200006ac        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .jcr           0x00000000200006ac        0x4 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
 
-.igot.plt       0x0000000020000448        0x0 load address 0x0000000000007150
+.igot.plt       0x00000000200006b0        0x0 load address 0x0000000000007154
  .igot.plt      0x0000000000000000        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
-.ARM.exidx      0x0000000000007150        0x8
-                0x0000000000007150                __exidx_start = .
+.ARM.exidx      0x0000000000007154        0x8
+                0x0000000000007154                __exidx_start = .
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0000000000007150        0x8 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
-                0x0000000000007158                __exidx_end = .
+ .ARM.exidx     0x0000000000007154        0x8 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+                0x000000000000715c                __exidx_end = .
 
-.ARM.extab      0x0000000000007158        0x0
+.ARM.extab      0x000000000000715c        0x0
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x0000000000007158        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .ARM.extab     0x000000000000715c        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
 
-.rel.dyn        0x0000000000007158        0x0
+.rel.dyn        0x000000000000715c        0x0
  .rel.iplt      0x0000000000000000        0x0 /Applications/ti/ccsv6/tools/compiler/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
 .bss            0x0000000020000800      0xfb4
@@ -1155,7 +1155,7 @@ OUTPUT(CC3100-And-TivaC.out elf32-littlearm)
  .debug_ranges  0x0000000000000460       0xd0 ./simplelink/source/socket.o
  .debug_ranges  0x0000000000000530       0xa0 ./simplelink/source/wlan.o
 
-.debug_line     0x0000000000000000     0x32f7
+.debug_line     0x0000000000000000     0x32f8
  .debug_line    0x0000000000000000      0x18d ./main.o
  .debug_line    0x000000000000018d      0x188 ./tm4c123gh6pm_startup_ccs_gcc.o
  .debug_line    0x0000000000000315       0x1d ./ERRH/ERRH.o
@@ -1163,19 +1163,19 @@ OUTPUT(CC3100-And-TivaC.out elf32-littlearm)
  .debug_line    0x000000000000054a       0x7d ./HAL/SRHL.o
  .debug_line    0x00000000000005c7      0x11a ./HAL/TIMD.o
  .debug_line    0x00000000000006e1      0x102 ./HAL/board.o
- .debug_line    0x00000000000007e3      0x28b ./HAL/uDMA.o
- .debug_line    0x0000000000000a6e      0x162 ./cmsis/cmsis_nvic.o
- .debug_line    0x0000000000000bd0      0x1d5 ./cmsis/system_LM4F.o
- .debug_line    0x0000000000000da5      0x416 ./simplelink/source/device.o
- .debug_line    0x00000000000011bb      0x7f8 ./simplelink/source/driver.o
- .debug_line    0x00000000000019b3      0x136 ./simplelink/source/flowcont.o
- .debug_line    0x0000000000001ae9      0x2e2 ./simplelink/source/fs.o
- .debug_line    0x0000000000001dcb      0x4cb ./simplelink/source/netapp.o
- .debug_line    0x0000000000002296      0x1f8 ./simplelink/source/netcfg.o
- .debug_line    0x000000000000248e      0x263 ./simplelink/source/nonos.o
- .debug_line    0x00000000000026f1      0x5c7 ./simplelink/source/socket.o
- .debug_line    0x0000000000002cb8      0x136 ./simplelink/source/spawn.o
- .debug_line    0x0000000000002dee      0x509 ./simplelink/source/wlan.o
+ .debug_line    0x00000000000007e3      0x28c ./HAL/uDMA.o
+ .debug_line    0x0000000000000a6f      0x162 ./cmsis/cmsis_nvic.o
+ .debug_line    0x0000000000000bd1      0x1d5 ./cmsis/system_LM4F.o
+ .debug_line    0x0000000000000da6      0x416 ./simplelink/source/device.o
+ .debug_line    0x00000000000011bc      0x7f8 ./simplelink/source/driver.o
+ .debug_line    0x00000000000019b4      0x136 ./simplelink/source/flowcont.o
+ .debug_line    0x0000000000001aea      0x2e2 ./simplelink/source/fs.o
+ .debug_line    0x0000000000001dcc      0x4cb ./simplelink/source/netapp.o
+ .debug_line    0x0000000000002297      0x1f8 ./simplelink/source/netcfg.o
+ .debug_line    0x000000000000248f      0x263 ./simplelink/source/nonos.o
+ .debug_line    0x00000000000026f2      0x5c7 ./simplelink/source/socket.o
+ .debug_line    0x0000000000002cb9      0x136 ./simplelink/source/spawn.o
+ .debug_line    0x0000000000002def      0x509 ./simplelink/source/wlan.o
 
 .debug_str      0x0000000000000000     0x4908
  .debug_str     0x0000000000000000      0x7bb ./main.o

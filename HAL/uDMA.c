@@ -70,7 +70,7 @@ static uint32_t control_word_ch13 =	(3<<30)	//destination address increment (No 
 static void SSI2DMAConfiguration(void)
 {
 	if((((uint32_t)udma_control_structure & ~(0x3FF)) == (uint32_t)udma_control_structure)
-			&& ((uint32_t)udma_control_structure >= 0x20000000))
+			&& ((uint32_t)udma_control_structure >= 0x20000268))
 	{
 		SYSCTL->RCGCDMA = (0x01); 	//Enable clock for DMA
 		UDMA->CFG = (uint32_t)(0x01);			//Enable uDMA controller
