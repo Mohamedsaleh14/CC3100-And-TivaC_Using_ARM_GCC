@@ -33,7 +33,6 @@
 #ifndef HAL_SPID_H_
 #define HAL_SPID_H_
 
-
 /** SPI Configuration */
 #define IS_SPI					1		// 1:there is SPI in system 0:there is no SPI in system
 
@@ -153,7 +152,6 @@ extern uint8_t SPID_SSI3SendData(uint16_t data);
 extern uint16_t SPID_SSI3ReceiveData(void);
 extern SPID_Status_T SPID_GetSSI3Status(void);
 #endif
-
 
 
 #endif /* HAL_SPID_H_ */

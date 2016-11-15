@@ -44,10 +44,9 @@
 #define RECEIVE_FIFO_NOT_EMPTY	(1<<2)
 #define TRANSMIT_FIFO_NOT_FULL	(1<<1)
 
-#define PORTE_CLOCK_ENABLE_BIT		(0x10)
-#define PE0							(0x01)
-#define PE4							(0x10)
-
+/*************************************************************************/
+/*				      local variable declaration						   */
+/*************************************************************************/
 static SPID_SSI_T enabled_spi;
 #ifdef SPI_0
 SPID_Status_T ssi0_status;
@@ -65,6 +64,9 @@ SPID_Status_T ssi2_status;
 SPID_Status_T ssi3_status;
 #endif
 
+/*************************************************************************/
+/*				      local Functions declaration					   */
+/*************************************************************************/
 #ifdef SPI_0
 static void SSI0Init(void);
 #endif
@@ -78,7 +80,9 @@ static void SSI2Init(void);
 static void SSI3Init(void);
 #endif
 
-
+/*************************************************************************/
+/*				      local Functions definition						   */
+/*************************************************************************/
 #ifdef SPI_0
 static void SSI0Init(void)
 {
@@ -213,6 +217,10 @@ static void SSI3Init(void)
 }
 #endif
 
+
+/*************************************************************************/
+/*						  Exported Functions							   */
+/*************************************************************************/
 void SPID_Init(SPID_SpiPort_T ssix)
 {
 	static uint8_t first_entry = TRUE_BOOL;
@@ -533,8 +541,6 @@ SPID_Status_T SPID_GetSSI3Status(void)
 	return return_val;
 }
 #endif
-
-
 
 
 #endif
