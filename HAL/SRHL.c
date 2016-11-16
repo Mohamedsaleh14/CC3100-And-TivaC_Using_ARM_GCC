@@ -29,36 +29,29 @@
  * Version:		1.0.0.
  * Description:	Sender/Receiver Handler.
  */
-
+//#include <stdint.h>
 #include "../common.h"
+#include "../simplelink/include/simplelink.h"
+#include "board.h"
 #include "SRHL.h"
+#include "TIMD.h"
+#include "../cmsis/LM4F120H5QR.h"
+#include "../cmsis/core_cm4.h"
+#include "../cmsis/core_cmFunc.h"
 
-Fd_t SRHL_IfOpen(char* pIfName , unsigned long flags)
+static void GPIOsInit(void);
+
+static void GPIOsInit(void)
 {
-	/*
-	 * Initialize PE4 (nHIB) as GPIO, LOW
-	 * Initialize PE0 (CS) as GPIO HIGH
-	 */
+	SYSCTL->RCGCGPIO |= 0x12; //Enable clock for port E and port B
+	GPIOE->DIR |= ((1<<0)|(1<<4));  // make both PINs as output
+	GPIOE->DEN |= ((1<<0)|(1<<4));
+	GPIOE->DATA &= ~(1<<4);  // output zero
+	GPIOE->DATA |= (1<<0);
 
-
-	/*
-	 * Enable pull up on PB1, CC3100 UART Rx --> 4ma, type std wpu
-	 *
-	 * Configure SSI2
-	 * 		PB4 ---> CLK
-	 * 		PB5 ---> FSS
-	 * 		PB6 ---> Rx
-	 * 		PB7 ---> Tx
-	 */
-
-	/*
-	 * Clock is configured at 12 MHz
-	 * FRF MOTO MODE 0
-	 * MODE MASTER
-	 * 8
-	 *
-	 * ENABLE SSI2
-	 */
+	GPIOB->DR4R |= (1<<1);
+	GPIOB->PUR |= (1<<1);
+	GPIOB->DEN |= (1<<1);
 
 	/*
 	 * Configure HOST IRQ line
@@ -71,19 +64,33 @@ Fd_t SRHL_IfOpen(char* pIfName , unsigned long flags)
 	 * enable interrupt for portB inside the processor vtable
 	 * Processor interrupt enable
 	 */
+	GPIOB->DIR &= ~(1<<2);
+	GPIOB->DR2R |= (1<<2);
+	GPIOB->PDR |= (1<<2);
+	GPIOB->IEV |= (1<<2);
+	GPIOB->ICR |= (1<<2);
+	GPIOB->IM &= ~(1<<2);
+	NVIC_EnableIRQ(GPIOB_IRQn);
+}
+
+Fd_t SRHL_IfOpen(char* pIfName , unsigned long flags)
+{
+	/*
+	 * Initialize PE4 (nHIB) as GPIO, LOW
+	 * Initialize PE0 (CS) as GPIO HIGH
+	 * Enable pull up on PB1
+	 */
+	GPIOsInit();
 
 	/*
 	 * Delay 1ms
 	 */
-
+	TIMD_WaitTimerA(1000);
 	/*
 	 * Enable WLAN interrupt
-	 *
-	 *
-	 * CC3100_InterruptEnable();
 	 */
-
-	//return
+	CC3100_InterruptEnable();
+	return NONOS_RET_OK;
 }
 
 
